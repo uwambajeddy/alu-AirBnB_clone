@@ -14,13 +14,13 @@ class HBNBCommand(cmd.Cmd):
     """
     prompt = '(hbnb) '
 
-    def do_quit(self, arg):
+    def do_quit(self):
         """
         Quit command to exit the program
         """
         return True
 
-    def do_EOF(self, arg):
+    def do_eof(self):
         """
         EOF command to exit the program
         """
@@ -30,7 +30,6 @@ class HBNBCommand(cmd.Cmd):
         """
         Empty line
         """
-        pass
 
     def do_create(self, arg):
         """
@@ -121,8 +120,6 @@ class HBNBCommand(cmd.Cmd):
             else:
                 setattr(models.storage.all()[key], args[2], args[3])
                 models.storage.save()
-
-    
 
 if __name__ == '__main__':
     """
