@@ -3,9 +3,9 @@
 This module defines the console for the AirBnB clone project
 """
 
+import shlex
 import cmd
 import models
-import shlex
 
 
 class HBNBCommand(cmd.Cmd):
@@ -30,6 +30,7 @@ class HBNBCommand(cmd.Cmd):
         """
         Empty line
         """
+        return False
 
     def do_create(self, arg):
         """
@@ -122,7 +123,4 @@ class HBNBCommand(cmd.Cmd):
                 models.storage.save()
 
 if __name__ == '__main__':
-    """
-    Main function
-    """
     HBNBCommand().cmdloop()
