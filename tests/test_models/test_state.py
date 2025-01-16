@@ -25,8 +25,8 @@ class TestState(unittest.TestCase):
         """Test name"""
         obj = State()
         self.assertEqual(obj.name, "")
-        obj.name = "Eddy"
-        self.assertEqual(obj.name, "Eddy")
+        obj.name = "Betty"
+        self.assertEqual(obj.name, "Betty")
 
     def test_str(self):
         """Test str"""
